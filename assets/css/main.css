@@ -208,7 +208,7 @@ img {
   left: 4px;
   bottom: 4px;
   transition: 0.4s;
-  background: url("icons/header/light-theme-icon.svg");
+  background: url("..icons/header/light-theme-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-repeat: no-repeat;
@@ -219,7 +219,7 @@ img {
 }
 .theme-switcher .switch .slider.on:before, .theme-switcher input:checked + .switch .slider:before {
   transform: translateX(20px) rotateZ(140deg);
-  background: url("icons/header/dark-theme-icon.svg");
+  background: url("..icons/header/dark-theme-icon.svg");
 }
 .bg_dotsImg circle {
   fill: var(--secondary-color);
