@@ -1,0 +1,10 @@
+//Theme
+@use "./themes/theme";
+// Base
+@use "./base/reset";
+// Layouts
+@use "./layout/container";
+// Components
+@use "./components/root";
+//pages
+@use "./pages/home";

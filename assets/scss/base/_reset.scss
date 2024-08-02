@@ -1,0 +1,36 @@
+// Abstracts / Variables
+@use "../abstracts/root" as *;
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    color: var(--secondary-color);
+    font-family: $primary-font;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    user-select: none;
+}
+
+a,
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img {
+    pointer-events: none;
+    user-drag: none;
+}

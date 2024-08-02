@@ -1,0 +1,92 @@
+@use "../abstracts/root" as *;
+
+/*  -- Banner Style -- */
+
+.banner {
+    height: 100vh;
+    &_title {
+        color: var(--tertiary-color);
+        @include primary-font($size: 32px, $weight: 600);
+        margin: 74px 0 32px 0;
+        & span {
+            color: var(--primary-color);
+        }
+    }
+    &_textContent {
+        color: var(--secondary-color);
+        @include primary-font($lineHeight: 25px);
+        margin-bottom: 24px;
+        max-width: 463px;
+    }
+    &_image {
+        width: 457px;
+        height: 386px;
+        filter: var(--img-filter);
+    }
+}
+
+.current_status {
+    position: absolute;
+    right: 36px;
+    bottom: -38px;
+    &_wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px;
+        width: 402px;
+        border: 1px solid var(--secondary-color);
+        background-color: var(--bg-color);
+        z-index: 1;
+    }
+    &_indicator {
+        width: 16px;
+        height: 16px;
+        background: var(--primary-color);
+    }
+    &_text {
+        @include primary-font($weight: 500);
+        & span {
+            @include primary-font($weight: 600);
+            color: var(--tertiary-color);
+        }
+    }
+    &:hover .cogwheel-icon {
+        animation: spin-smooth 1s linear infinite;
+    }
+    .cogwheel-icon {
+        width: 30px;
+        height: 30px;
+        animation: step-spin 60s steps(60) infinite;
+        @keyframes step-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(1440deg);
+            }
+        }
+        @keyframes spin-smooth {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        &-wrapper {
+            position: absolute;
+            right: -15px;
+            bottom: -19px;
+            z-index: 2;
+        }
+        &-front {
+            fill: var(--primary-color);
+        }
+        &-circle,
+        &-rear {
+            fill: var(--bg-color);
+        }
+    }
+}

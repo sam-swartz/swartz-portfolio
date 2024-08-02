@@ -1,0 +1,28 @@
+// Abstracts / Variables
+@use "../abstracts/root" as *;
+
+/* -- Container Style */
+
+.page_wrapper {
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.row-twoFace {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    & .col {
+        position: relative;
+        display: flex;
+    }
+    & .col-flow {
+        flex-flow: column;
+    }
+    & .col-justify-right {
+        justify-content: right;
+    }
+}
