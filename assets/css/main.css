@@ -83,7 +83,6 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 32px 0 8px 0;
-  margin-bottom: 60px;
 }
 .header_logo {
   display: flex;
@@ -482,6 +481,9 @@ img {
 }
 
 /*  -- Banner Style -- */
+.banner {
+  padding-top: 60px;
+}
 .banner_title {
   color: var(--tertiary-color);
   font-family: Fira Code;

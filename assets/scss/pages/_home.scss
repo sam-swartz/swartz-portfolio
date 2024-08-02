@@ -7,6 +7,7 @@
 /*  -- Banner Style -- */
 
 .banner {
+    padding-top: 60px;
     &_title {
         color: var(--tertiary-color);
         @include primary-font($size: 32px, $weight: 600);
