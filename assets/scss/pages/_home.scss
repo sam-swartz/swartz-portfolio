@@ -1,9 +1,12 @@
 @use "../abstracts/root" as *;
+.top_sectionWrapper {
+    height: 100vh;
+}
+
 
 /*  -- Banner Style -- */
 
 .banner {
-    height: 100vh;
     &_title {
         color: var(--tertiary-color);
         @include primary-font($size: 32px, $weight: 600);
