@@ -82,7 +82,7 @@
                 left: 4px;
                 bottom: 4px;
                 transition: .4s;
-                background: url('/assets/icons/header/light-theme-icon.svg');
+                background: url('../icons/header/light-theme-icon.svg');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -92,7 +92,7 @@
                 background-color: var(--primary-color);
                 &:before {
                     transform: translateX(20px) rotateZ(140deg);
-                    background: url('/assets/icons/header/dark-theme-icon.svg');
+                    background: url('../icons/header/dark-theme-icon.svg');
                 }
             }
         }
