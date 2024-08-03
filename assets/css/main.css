@@ -479,7 +479,7 @@ img {
 
 .social_media {
   position: absolute;
-  left: 10%;
+  left: -122px;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -518,6 +518,7 @@ img {
 
 .header_banner-wrapper {
   height: 100vh;
+  position: relative;
 }
 
 /*  -- Banner Style -- */
