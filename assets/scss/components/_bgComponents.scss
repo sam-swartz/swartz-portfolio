@@ -1,9 +1,9 @@
 @use "../abstracts/root" as *;
 // Define variables for common values
-$animation-duration: 13s;
-$secondary-color: var(--secondary-color);
 $primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
 $circle-count: 25;
+$animation-duration: 13s;
 $animation-step: 0.1s;
 // Mixin for staggered animation delay
 @mixin staggered-animation-delay($count, $step) {
