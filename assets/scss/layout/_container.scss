@@ -3,6 +3,10 @@
 
 /* -- Container Style */
 
+.overflowX_hide {
+    overflow-x: hidden !important;
+}
+
 .page_wrapper {
     background-color: var(--bg-color);
     position: relative;
