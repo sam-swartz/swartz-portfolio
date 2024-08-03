@@ -551,6 +551,9 @@ img {
   margin-bottom: 24px;
   max-width: 463px;
 }
+.banner_imgAndState_wrapper {
+  position: relative;
+}
 .banner_image {
   width: 457px;
   height: 386px;
@@ -560,7 +563,7 @@ img {
 .current_status {
   position: absolute;
   right: 36px;
-  bottom: -38px;
+  bottom: -34px;
 }
 .current_status_wrapper {
   position: relative;

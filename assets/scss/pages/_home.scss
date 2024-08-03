@@ -23,6 +23,9 @@
         margin-bottom: 24px;
         max-width: 463px;
     }
+    &_imgAndState_wrapper {
+        position: relative;
+    }
     &_image {
         width: 457px;
         height: 386px;
@@ -33,7 +36,7 @@
 .current_status {
     position: absolute;
     right: 36px;
-    bottom: -38px;
+    bottom: -34px;
     &_wrapper {
         position: relative;
         display: flex;

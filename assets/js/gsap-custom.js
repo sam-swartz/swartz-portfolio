@@ -1,24 +1,38 @@
-gsap.from(".dropBounce_content", {
-    duration: 2.5,
-    ease: "bounce.out",
-    y: -500,
+// gsap.from(".dropBounce_content", {
+//     duration: 2,
+//     ease: "bounce.out",
+//     y: -600,
+//     delay: 2.5
+// });
 
-});
-gsap.from(".dropBounce_content2", {
-    duration: 2,
-    ease: "bounce.out",
-    y: -600,
-    delay: .5
 
-});
+const bannerRight_animation = gsap.timeline({ defaults: { duration: 1 } })
+bannerRight_animation
+    .from(".banner_title", {
+        duration: 3,
+        ease: "bounce.out",
+        y: -500,
+        delay: 1,
+    })
+    .fromTo(".btn_contactMe", { duration: 2.5, x: -500, opacity: 0, }, { x: 0, opacity: 1, });
 
-gsap.from(".navBar_show", {
-    duration: 2.5,
-    ease: "power3.out",
-    y: -250,
-    delay: 1.5
-});
+const banner_show_slow = gsap.timeline({ defaults: { duration: 1 } })
+banner_show_slow
+    .from(".navBar_show", {
+        duration: 1.5,
+        ease: "power3.out",
+        y: -250,
 
-gsap.from(".content_show-slow", { duration: 3, opacity: 0, ease: "slow(0.5, 0.8, true)", delay: 2.5, });
+    })
+    .fromTo(".banner_imgAndState_wrapper", {
+        duration: 3,
+        x: 500,
+        opacity: 0,
 
-gsap.from(".content_show-frmLeft", { duration: 2, x: -500, delay: 2, });
+    }, {
+        x: 0,
+        opacity: 1,
+    })
+    .from(".banner_textContent", { opacity: 0, delay: .5, })
+    .from(".bg_rect-banner", { opacity: 0 })
+    .from(".bg_dots-banner", { opacity: 0 })
