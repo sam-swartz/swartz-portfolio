@@ -9,12 +9,12 @@
 const bannerRight_animation = gsap.timeline({ defaults: { duration: 1 } })
 bannerRight_animation
     .from(".banner_title", {
-        duration: 3,
+        duration: 2.5,
         ease: "bounce.out",
         y: -500,
-        delay: 1,
+        delay: 1.5,
     })
-    .fromTo(".btn_contactMe", { duration: 2.5, x: -500, opacity: 0, }, { x: 0, opacity: 1, });
+    .fromTo(".btn_contactMe", { duration: 3, x: -500, opacity: 0, }, { x: 0, opacity: 1, });
 
 const banner_show_slow = gsap.timeline({ defaults: { duration: 1 } })
 banner_show_slow
@@ -25,14 +25,15 @@ banner_show_slow
 
     })
     .fromTo(".banner_imgAndState_wrapper", {
-        duration: 3,
+        duration: 2.5,
         x: 500,
         opacity: 0,
 
     }, {
         x: 0,
+        ease: "elastic.out(1,0.75)",
         opacity: 1,
     })
     .from(".banner_textContent", { opacity: 0, delay: .5, })
-    .from(".bg_rect-banner", { opacity: 0 })
+    .from(".bg_rect", { opacity: 0 })
     .from(".bg_dots-banner", { opacity: 0 })
