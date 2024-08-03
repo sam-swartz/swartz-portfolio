@@ -14,7 +14,7 @@ bannerRight_animation
         y: -500,
         delay: 1.5,
     })
-    .fromTo(".btn_contactMe", { duration: 3, x: -500, opacity: 0, }, { x: 0, opacity: 1, });
+    .fromTo(".btn_contactMe", { duration: 3, x: -500, opacity: 0, }, { x: 0, opacity: 1, ease: "sine.in", });
 
 const banner_show_slow = gsap.timeline({ defaults: { duration: 1 } })
 banner_show_slow
@@ -35,5 +35,5 @@ banner_show_slow
         opacity: 1,
     })
     .from(".banner_textContent", { opacity: 0, delay: .5, })
-    .from(".bg_rect", { opacity: 0 })
+    .from(".bg_rect-banner", { opacity: 0 })
     .from(".bg_dots-banner", { opacity: 0 })
