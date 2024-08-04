@@ -39,6 +39,18 @@ body {
   overflow-x: hidden;
   user-select: none;
 }
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px var(--bg-color);
+  background-color: var(--bg-color);
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--bg-color);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 50px;
+}
 
 a,
 button {
@@ -64,7 +76,9 @@ img {
 
 .container {
   max-width: 1024px;
+  height: 100vh;
   margin: auto;
+  display: flex;
   background-color: var(--bg-color);
 }
 
@@ -521,11 +535,10 @@ img {
 }
 
 .header_banner-wrapper {
-  height: 100vh;
   position: relative;
 }
 
-/*  -- Banner Style -- */
+/*  -- Banner Style Starts -- */
 .banner {
   padding-top: 60px;
 }
@@ -632,5 +645,67 @@ img {
 .current_status .cogwheel-icon-circle, .current_status .cogwheel-icon-rear {
   fill: var(--bg-color);
 }
+
+/*  -- Banner Style Ends -- */
+/*  -- Quote Style Starts -- */
+.quote_wrapper {
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.quote_text {
+  font-family: Fira Code;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+  display: inline-flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 10px;
+  outline: 1px solid var(--secondary-color);
+  background: var(--bg-color);
+  position: relative;
+}
+.quote_text .quote_icon {
+  display: flex;
+  padding: 4px 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--bg-color);
+  position: absolute;
+  z-index: 2;
+}
+[themeMode=light] .quote_text .quote_icon svg path {
+  fill: var(--primary-color);
+}
+.quote_text .quote_icon-top {
+  left: 11px;
+  top: -14px;
+}
+.quote_text .quote_icon-bottom {
+  right: 11px;
+  bottom: -14px;
+}
+.quote_author {
+  font-family: Fira Code;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  outline: 1px solid var(--secondary-color);
+  background: var(--bg-color);
+  position: relative;
+  bottom: -1px;
+}
+
+/*  -- Banner Style Ends -- */
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,10 @@
 @use "../abstracts/root" as *;
 .header_banner-wrapper {
-    height: 100vh;
     position: relative;
 }
 
 
-/*  -- Banner Style -- */
+/*  -- Banner Style Starts -- */
 
 .banner {
     padding-top: 60px;
@@ -98,3 +97,64 @@
         }
     }
 }
+
+
+/*  -- Banner Style Ends -- */
+
+
+/*  -- Quote Style Starts -- */
+
+.quote {
+    &_wrapper {
+        margin: auto;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &_text {
+        @include primary-font($size: 24px, $weight: 500);
+        display: inline-flex;
+        padding: 32px;
+        align-items: flex-start;
+        gap: 10px;
+        outline: 1px solid var(--secondary-color);
+        background: var(--bg-color);
+        position: relative;
+        & .quote_icon {
+            display: flex;
+            padding: 4px 8px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            background: var(--bg-color);
+            position: absolute;
+            z-index: 2;
+        }
+        [themeMode="light"] & .quote_icon svg path {
+            fill: var(--primary-color);
+        }
+        & .quote_icon-top {
+            left: 11px;
+            top: -14px;
+        }
+        & .quote_icon-bottom {
+            right: 11px;
+            bottom: -14px;
+        }
+    }
+    &_author {
+        @include primary-font($size: 24px, $weight: 400);
+        display: flex;
+        padding: 16px;
+        align-items: flex-start;
+        gap: 10px;
+        outline: 1px solid var(--secondary-color);
+        background: var(--bg-color);
+        position: relative;
+        bottom: -1px;
+    }
+}
+
+
+/*  -- Banner Style Ends -- */

@@ -1,10 +1,4 @@
-// gsap.from(".dropBounce_content", {
-//     duration: 2,
-//     ease: "bounce.out",
-//     y: -600,
-//     delay: 2.5
-// });
-
+// <-- banner Animation Start here -->
 
 const bannerRight_animation = gsap.timeline({ defaults: { duration: 1 } })
 bannerRight_animation
@@ -37,3 +31,6 @@ banner_show_slow
     .from(".banner_textContent", { opacity: 0, delay: .5, })
     .from(".bg_rect-banner", { opacity: 0 })
     .from(".bg_dots-banner", { opacity: 0 })
+
+
+// <-- banner Animation ends here -->
