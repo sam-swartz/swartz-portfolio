@@ -105,6 +105,7 @@
 /*  -- Quote Style Starts -- */
 
 .quote {
+    position: relative;
     &_wrapper {
         margin: auto;
         width: fit-content;
@@ -122,25 +123,22 @@
         background: var(--bg-color);
         position: relative;
         & .quote_icon {
-            display: flex;
-            padding: 4px 8px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
             background: var(--bg-color);
             position: absolute;
             z-index: 2;
         }
         [themeMode="light"] & .quote_icon svg path {
-            fill: var(--primary-color);
+            fill: var(--bg-color);
+            stroke: var(--primary-color);
+            stroke-width: 1px;
         }
         & .quote_icon-top {
             left: 11px;
-            top: -14px;
+            top: -16px;
         }
         & .quote_icon-bottom {
             right: 11px;
-            bottom: -14px;
+            bottom: -22px;
         }
     }
     &_author {
@@ -154,7 +152,71 @@
         position: relative;
         bottom: -1px;
     }
+    .paper_plane {
+        position: absolute;
+        left: 0;
+        top: 50vh;
+        &-img path {
+            fill: var(--primary-color);
+        }
+        &-img g path {
+            filter: brightness(80%);
+            fill: var(--primary-color);
+        }
+        [themeMode=light] &-img path {
+            fill: var(--bg-color);
+            filter: none;
+            stroke: var(--primary-color);
+            stroke-width: 2px;
+        }
+    }
+    .space_item {
+        position: absolute;
+        & svg {
+            fill: var(--primary-color);
+        }
+        &_bg {
+            fill: var(--bg-color);
+        }
+        &_primary {
+            fill: var(--primary-color);
+        }
+        &-01 {
+            top: 80px;
+            left: 56px;
+        }
+        &-02 {
+            top: 14%;
+            left: 40%;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        &-03 {
+            top: 65px;
+            right: 20%;
+        }
+        &-04 {
+            left: 106;
+            bottom: 122px;
+        }
+        &-05 {
+            top: 85%;
+            left: 50%;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        &-06 {
+            bottom: 10%;
+            right: 0;
+            & svg {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
 }
 
 
-/*  -- Banner Style Ends -- */
+/*  -- Quote Style Ends -- */

@@ -3,8 +3,14 @@
 
 /* -- Container Style */
 
-.overflowX_hide {
-    overflow-x: hidden !important;
+.overflow_hide {
+    overflow: hidden;
+    &_X {
+        overflow-x: hidden !important;
+    }
+    &_Y {
+        overflow-y: hidden !important;
+    }
 }
 
 .page_wrapper {
@@ -14,10 +20,18 @@
 
 .container {
     max-width: 1024px;
-    height: 100vh;
     margin: auto;
     display: flex;
     background-color: var(--bg-color);
+}
+
+.vh {
+    &-100 {
+        height: 100vh;
+    }
+    &-10 {
+        height: 10vh;
+    }
 }
 
 .row-twoFace {

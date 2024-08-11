@@ -40,3 +40,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+function createRandomDotsSvg() {
+    const svgNamespace = "http://www.w3.org/2000/svg";
+    const svgElement = document.createElementNS(svgNamespace, "svg");
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    svgElement.setAttribute("width", width);
+    svgElement.setAttribute("height", height);
+    svgElement.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    svgElement.setAttribute("style", "position:absolute; top:0; left:0;");
+
+    const numberOfDots = 100; // Adjust this to increase/decrease the number of dots
+
+    for (let i = 0; i < numberOfDots; i++) {
+        const dot = document.createElementNS(svgNamespace, "circle");
+        const randomX = Math.random() * width;
+        const randomY = Math.random() * height;
+        const randomSize = Math.random() * 3 + 1; // Dot sizes between 1 and 4
+
+        dot.setAttribute("cx", randomX);
+        dot.setAttribute("cy", randomY);
+        dot.setAttribute("r", randomSize);
+        dot.setAttribute("fill", "#00ff00"); // Change to your desired dot color
+        dot.setAttribute("class", "space_item_primary"); // Adding the class here
+
+        svgElement.appendChild(dot);
+    }
+
+    return svgElement;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const svgContainer = document.getElementById("svg-container");
+    const svg = createRandomDotsSvg();
+    svgContainer.appendChild(svg);
+
+    // Re-generate SVG on window resize to fit new dimensions
+    window.addEventListener('resize', () => {
+        svgContainer.innerHTML = '';
+        const resizedSvg = createRandomDotsSvg();
+        svgContainer.appendChild(resizedSvg);
+    });
+});
