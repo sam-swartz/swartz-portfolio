@@ -186,45 +186,48 @@ space_item_05.fromTo(".space_item-05", { x: -200, y: 200 }, { x: 0, y: 0 })
 
 
 
-const rocketPathPoints = [
-    { x: -200, y: 0 },
-    { x: -650, y: 200 },
-    { x: -850, y: 100 },
-    { x: -800, y: -100 },
-    { x: -500, y: 100 },
-    { x: -800, y: 200 },
-    { x: -900, y: 200 },
-    { x: -1000, y: -100 },
-    { x: -1100, y: -150 },
-    { x: -1300, y: -130 },
-    { x: -1200, y: 100 },
-    { x: -1020, y: 50 },
-    { x: -1000, y: -100 },
-    { x: -1200, y: -150 },
-    { x: -1900, y: 550 },
-];
-
-
 // Create a timeline for the animation
 const space_item_06 = gsap.timeline({
-    defaults: { ease: "power1.inOut", duration: 18 } // Setting defaults
+    defaults: { ease: "power1.inOut", duration: 6, rotation: 276 } // Setting defaults
 });
 
-// Create the motionPath
-space_item_06.to(".space_item-06", {
-    motionPath: {
-        path: rocketPathPoints.map(point => ({ x: point.x, y: point.y })),
-        autoRotate: true,
-        alignOrigin: [0.5, 0.5]
-    }
-});
+space_item_06.fromTo(".space_item-06", { x: 0, y: 400 }, { x: 0, y: 0 })
+    .to(".space_item-06", {
 
-// Add zIndex changes at the right time in the animation
-rocketPathPoints.forEach((point, index) => {
-    space_item_06.set(".space_item-06", { zIndex: point.zIndex }, index * (10 / (rocketPathPoints.length - 1)));
-});
+        y: 80,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    .to(".space_item-06", {
 
+        y: 0,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    .to(".space_item-06", {
 
+        y: 80,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    .to(".space_item-06", {
+
+        y: 0,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    .to(".space_item-06", {
+
+        y: 80,
+        duration: 2,
+        ease: "power1.inOut"
+    })
+    .to(".space_item-06", {
+
+        y: 400,
+        duration: 2,
+        ease: "power1.inOut"
+    })
 
 
 // Create a master timeline to hold both tweens

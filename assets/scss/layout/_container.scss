@@ -21,8 +21,14 @@
 .container {
     max-width: 1024px;
     margin: auto;
-    display: flex;
     background-color: var(--bg-color);
+    &_flex{
+           display: flex;
+    }
+}
+
+.container-spacer {
+    padding-top: 60px;
 }
 
 .vh {

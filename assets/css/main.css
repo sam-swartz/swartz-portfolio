@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@font-face {
+  font-family: Fira Code;
+  src: url("../font/Fira_Code/static/FiraCode-Regular.ttf");
+}
 :root {
   --primary-color: #92DD78;
   --secondary-color: #abb2bf;
@@ -83,8 +86,14 @@ img {
 .container {
   max-width: 1024px;
   margin: auto;
-  display: flex;
   background-color: var(--bg-color);
+}
+.container_flex {
+  display: flex;
+}
+
+.container-spacer {
+  padding-top: 60px;
 }
 
 .vh-100 {
@@ -546,6 +555,65 @@ img {
   }
 }
 
+.custom_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--secondary-color);
+}
+.custom_cards_img {
+  display: contents;
+  outline: 1px solid var(--secondary-color);
+}
+.custom_cards_title {
+  padding: 8px;
+  width: 100%;
+}
+.custom_cards_content {
+  outline: 1px solid var(--secondary-color);
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 85% 15%;
+  align-items: center;
+}
+.title_text {
+  font-family: Fira Code;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+  color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.title_text span {
+  color: var(--primary-color);
+}
+.title_line::after {
+  content: "";
+  margin-left: 16px;
+  width: 50%;
+  height: 1px;
+  background-color: var(--primary-color);
+}
+.title_link {
+  font-family: Fira Code;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+  text-align: end;
+}
+
 .header_banner-wrapper {
   position: relative;
 }
@@ -763,7 +831,7 @@ img {
   right: 20%;
 }
 .quote .space_item-04 {
-  left: 106;
+  left: 106px;
   bottom: 122px;
 }
 .quote .space_item-05 {
@@ -774,8 +842,8 @@ img {
   transform: translate(-50%, -50%);
 }
 .quote .space_item-06 {
-  bottom: 10%;
-  right: 0;
+  bottom: 30%;
+  right: 10%;
 }
 .quote .space_item-06 svg {
   width: 100px;
@@ -783,5 +851,16 @@ img {
 }
 
 /*  -- Quote Style Ends -- */
+/*  -- Projects Style Starts -- */
+.projects_wrapper {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+}
+.projects_title {
+  color: var(--tertiary-color);
+}
+
+/*  -- Projects Style Ends -- */
 
 /*# sourceMappingURL=main.css.map */

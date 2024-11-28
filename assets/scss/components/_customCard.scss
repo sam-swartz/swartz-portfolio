@@ -1,0 +1,24 @@
+// Abstracts / Variables
+@use "../abstracts/root" as *;
+.custom_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--secondary-color);
+  &_img {
+    display: contents;
+    outline: 1px solid var(--secondary-color);
+  }
+  &_title {
+    padding: 8px;
+    width: 100%;
+  }
+  &_content {
+    outline: 1px solid var(--secondary-color);
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

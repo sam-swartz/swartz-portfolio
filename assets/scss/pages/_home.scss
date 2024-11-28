@@ -197,7 +197,7 @@
             right: 20%;
         }
         &-04 {
-            left: 106;
+            left: 106px;
             bottom: 122px;
         }
         &-05 {
@@ -208,8 +208,8 @@
             transform: translate(-50%, -50%);
         }
         &-06 {
-            bottom: 10%;
-            right: 0;
+            bottom: 30%;
+            right: 10%;
             & svg {
                 width: 100px;
                 height: 100px;
@@ -220,3 +220,18 @@
 
 
 /*  -- Quote Style Ends -- */
+
+/*  -- Projects Style Starts -- */
+
+.projects{
+    &_wrapper{
+        display: flex;
+        height: fit-content;
+        justify-content: space-between;
+    }
+    &_title{
+        color: var(--tertiary-color);
+    }
+}
+
+/*  -- Projects Style Ends -- */
