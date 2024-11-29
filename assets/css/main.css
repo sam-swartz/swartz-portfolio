@@ -560,11 +560,21 @@ img {
   flex-direction: column;
   align-items: flex-start;
   outline: 1px solid var(--secondary-color);
-  height: fit-content;
+  height: 100%;
+}
+.custom_cards > * {
+  flex: 0 0 auto;
+}
+.custom_cards > .custom_cards_content {
+  flex: 1 0 auto;
 }
 .custom_cards_img {
   display: contents;
   outline: 1px solid var(--secondary-color);
+}
+.custom_cards_img > video, .custom_cards_img > img {
+  width: 100%;
+  border-bottom: 1px solid var(--secondary-color);
 }
 .custom_cards_title {
   padding: 8px;
@@ -854,9 +864,9 @@ img {
 /*  -- Quote Style Ends -- */
 /*  -- Projects Style Starts -- */
 .projects_wrapper {
-  display: flex;
-  height: fit-content;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
 }
 .projects_title {
   color: var(--tertiary-color);

@@ -5,10 +5,22 @@
   flex-direction: column;
   align-items: flex-start;
   outline: 1px solid var(--secondary-color);
-  height: fit-content;
+  height: 100%;
+  & > * {
+    flex: 0 0 auto;
+  }
+  
+  & > &_content {
+    flex: 1 0 auto;
+  }
   &_img {
     display: contents;
     outline: 1px solid var(--secondary-color);
+    & > video,
+    & > img {
+      width: 100%;
+      border-bottom: 1px solid var(--secondary-color);
+    }
   }
   &_title {
     padding: 8px;
