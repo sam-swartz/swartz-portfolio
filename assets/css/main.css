@@ -559,7 +559,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid var(--secondary-color);
+  outline: 1px solid var(--secondary-color);
+  height: fit-content;
 }
 .custom_cards_img {
   display: contents;
