@@ -53,4 +53,8 @@
     & .col-justify-right {
         justify-content: right;
     }
+
+    &.col-4-8 {
+        grid-template-columns: 40% 60%;
+    }
 }

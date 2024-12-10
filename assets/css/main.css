@@ -117,6 +117,9 @@ img {
 .row-twoFace .col-justify-right {
   justify-content: right;
 }
+.row-twoFace.col-4-8 {
+  grid-template-columns: 40% 60%;
+}
 
 /* -- Header Style -- */
 .header {
@@ -625,6 +628,11 @@ img {
   text-align: end;
 }
 
+#render-container {
+  width: 100vw;
+  height: 100vh;
+}
+
 .header_banner-wrapper {
   position: relative;
 }
@@ -873,5 +881,7 @@ img {
 }
 
 /*  -- Projects Style Ends -- */
+/*  -- Skills Style Starts -- */
+/*  -- Skills Style Ends -- */
 
 /*# sourceMappingURL=main.css.map */
